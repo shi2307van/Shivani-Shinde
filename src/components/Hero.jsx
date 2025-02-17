@@ -11,7 +11,7 @@ const Hero = () => {
   ];
   
   return (
-    <section className="min-h-screen bg-black text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[linear-gradient(40deg,#000000,#1a1a1a,#000000)] opacity-80">
         <div className="absolute inset-0" style={{ 
