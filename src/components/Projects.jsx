@@ -3,6 +3,7 @@ import { ExternalLink, Github, Terminal } from 'lucide-react';
 import travelImg from '../assets/travel-hero.jpg';
 import booklyImg from '../assets/bookly-hero.jpg';
 import quizImg from '../assets/quiz-hero.jpg';
+import shopifyImg from '../assets/shopify-hero.jpg';
 
 const Projects = () => {
   const [modalState, setModalState] = useState({
@@ -39,11 +40,31 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "BBMS",
+      description: "Developed a comprehensive Blood Bank Management System with user authentication and camp management. Features include donor registration, blood camp scheduling, donor list viewing, profile management, emergency blood request system, and real-time blood availability tracking. Users can register for camps, update profiles, and submit urgent blood requests.",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Healthcare"],
+      type: "Full Stack Development",
+      code: "PRJ_001",
+      image: booklyImg,
+      liveDemo: "https://bbms-sable-omega.vercel.app/",
+      sourceCode: "https://github.com/shi2307van/BBMS/tree/my-new-branch"
+    },
+    {
+      title: "Shopify",
+      description: "Developed a full-stack e-commerce platform with user authentication, product management, and order processing. Features include user registration, product filtering, cart management, and an admin dashboard for product and order management.",
+      tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "E-commerce"],
+      type: "Full Stack Development",
+      code: "PRJ_002",
+      image: shopifyImg,
+      liveDemo: "https://e-commerce-website-sable-omega.vercel.app/",
+      sourceCode: "https://github.com/shi2307van/E-commerce-website/tree/my-new-branch"
+    },
+    {
       title: "Bookly",
       description: "Developed a website to sell books using HTML, CSS, and JavaScript. Created a user-friendly interface with features of searching and filtering, so the user can go through an enhanced searching form.",
       tags: ["HTML", "CSS", "JavaScript"],
       type: "Web Development",
-      code: "PRJ_001",
+      code: "PRJ_003",
       image: booklyImg,
       liveDemo: "https://bookst.netlify.app/",
       sourceCode: "https://github.com/shi2307van/Bookliy.com/tree/my-new-branch"
@@ -53,7 +74,7 @@ const Projects = () => {
       description: "Design a dynamic ticket booking website using HTML, CSS, and JavaScript, through which a user can online book his travel tickets. Integrated user-friendly navigation and real time booking updates.",
       tags: ["HTML", "CSS", "JavaScript", "Dynamic UI"],
       type: "Web Development",
-      code: "PRJ_002",
+      code: "PRJ_004",
       image: travelImg,
       liveDemo: "https://traveldey.netlify.app/",
       sourceCode: "https://github.com/shi2307van/Travel.com/tree/my-new-branch"
@@ -63,7 +84,7 @@ const Projects = () => {
       description: "Developed an interactive quiz application using HTML, CSS, JavaScript. Features include multiple quiz categories, real-time scoring, progress tracking, and a leaderboard system.",
       tags: ["HTML", "CSS", "JavaScript"],
       type: "Web Development",
-      code: "PRJ_003",
+      code: "PRJ_005",
       image: quizImg,
       liveDemo: "https://quizeapp-sigma.vercel.app/",
       sourceCode: "https://github.com/shi2307van/Quiz.com/tree/my-new-branch"
