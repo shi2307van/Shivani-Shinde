@@ -4,6 +4,7 @@ import travelImg from '../assets/travel-hero.jpg';
 import booklyImg from '../assets/bookly-hero.jpg';
 import quizImg from '../assets/quiz-hero.jpg';
 import shopifyImg from '../assets/shopify-hero.jpg';
+import bbmsImg from '../assets/bbms-hero.jpg';
 
 const Projects = () => {
   const [modalState, setModalState] = useState({
@@ -45,7 +46,7 @@ const Projects = () => {
       tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Healthcare"],
       type: "Full Stack Development",
       code: "PRJ_001",
-      image: booklyImg,
+      image: bbmsImg,
       liveDemo: "https://bbms-sable-omega.vercel.app/",
       sourceCode: "https://github.com/shi2307van/BBMS/tree/my-new-branch"
     },
