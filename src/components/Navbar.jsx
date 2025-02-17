@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Terminal } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -17,9 +18,9 @@ const Navbar = () => {
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const navbarHeight = 64; // Height of the navbar
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
 
       window.scrollTo({
         top: offsetPosition,
@@ -29,25 +30,29 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const [activeSection, setActiveSection] = useState('home');
-
-  useState(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
+      const scrollPosition = window.scrollY + 100;
+      
+      // Find the current section
+      const currentSection = navItems.find(item => {
+        const element = document.querySelector(item.href);
         if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          const { offsetTop, offsetHeight } = element;
+          return scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight;
         }
         return false;
       });
+
       if (currentSection) {
-        setActiveSection(currentSection);
+        setActiveSection(currentSection.href.substring(1));
       }
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
