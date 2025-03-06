@@ -69,7 +69,7 @@ const Hero = () => {
             {/* Action Buttons */}
             <div className="flex gap-4">
               <a
-                href="https://drive.google.com/file/d/1fbGlglXkD6-WtiM4o7ONbVpe_Lw4NcAG/view?usp=sharing"
+                href="https://drive.google.com/file/d/17xnjam24uhc1Tef2dX5Cvf3JV8NPHTqi/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative px-8 py-4 bg-cyan-400 text-black font-bold rounded overflow-hidden"
